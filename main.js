@@ -1,3 +1,7 @@
+
+/* path */
+var repo_site = "https://jymd　1024.github.io/demo/";
+
 /* create timeline */
 var timeline = [];
 
@@ -15,9 +19,9 @@ var instructions = {
       "<p>もし円が <strong>青なら</strong>、Fキーを押してください。</p>" +
       "<p>もし円が <strong>オレンジなら</strong>、Jキーを押してください。</p>" +
       "<div style='width: 700px;'>"+
-      "<div style='float: left;'><img src='img/blue.png'></img>" +
+      "<div style='float: left;'><img src='" + repo_site + "img/blue.png'></img>" +
       "<p class='small'><strong>Fキーを押してください</strong></p></div>" +
-      "<div class='float: right;'><img src='img/orange.png'></img>" +
+      "<div class='float: right;'><img src='" + repo_site + "img/orange.png'></img>" +
       "<p class='small'><strong>Jキーを押してください</strong></p></div>" +
       "</div>"+
       "<p>スペースキーを押すと実験を開始できます。</p>",
@@ -27,8 +31,14 @@ timeline.push(instructions);
 
 /* test trials */
 var test_stimuli = [
-  { stimulus: "img/blue.png", data: {test_part: 'test', correct_response: 'f'}},
-  { stimulus: "img/orange.png", data: {test_part: 'test', correct_response: 'j'}}
+  { stimulus: repo_site + "img/blue.png", 
+    data: {
+      test_part: 'test', 
+      correct_response: 'f'}},
+  { stimulus: repo_site + "img/orange.png", 
+    data: {
+      test_part: 'test', 
+      correct_response: 'j'}}
 ];
 
 var fixation = {
